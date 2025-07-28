@@ -1,0 +1,39 @@
+# FastAPI和相关依赖
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# CORS支持
+fastapi-cors==0.1.0
+
+# 日志和配置
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# 文件处理
+aiofiles==23.2.1
+python-magic==0.4.27
+
+# 数据库和向量存储（如果使用）
+pymilvus==2.3.4
+chromadb==0.4.18
+
+# 机器学习和NLP
+transformers==4.36.0
+torch==2.1.0
+sentence-transformers==2.2.2
+numpy==1.24.3
+pandas==2.0.3
+
+# HTTP客户端
+httpx==0.25.2
+requests==2.31.0
+
+# 文档处理
+pypdf2==3.0.1
+python-docx==1.1.0
+openpyxl==3.1.2
+
+# 其他工具
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4

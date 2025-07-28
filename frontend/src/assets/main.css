@@ -1,0 +1,160 @@
+@import './base.css';
+
+/* 全局样式重置和设置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 响应式字体大小 */
+@media (max-width: 768px) {
+  html, body {
+    font-size: 13px;
+  }
+  
+  #app {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 480px) {
+  html, body {
+    font-size: 12px;
+  }
+}
+
+/* 设备适配 */
+@media (orientation: landscape) and (max-height: 568px) {
+  /* 横屏小设备优化 */
+  .app-header {
+    height: 50px !important;
+  }
+}
+
+/* 高分辨率设备适配 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* 高清屏优化 */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* 确保元素不会溢出 */
+* {
+  max-width: 100%;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  
+  #app {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* 响应式辅助类 */
+.mobile-hidden {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+  
+  .mobile-only {
+    display: block !important;
+  }
+  
+  .mobile-full-width {
+    width: 100% !important;
+  }
+  
+  .mobile-text-center {
+    text-align: center !important;
+  }
+}
+
+/* 防止文本选择和触摸操作优化 */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.touch-action-manipulation {
+  touch-action: manipulation;
+}
